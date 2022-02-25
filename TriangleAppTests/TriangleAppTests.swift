@@ -11,7 +11,7 @@ import XCTest
 class TriangleAppTests: XCTestCase {
 
   func testInvalidInputSides() {
-    XCTAssertThrowsError(try detectTriangle(-1, -2, -3)) { error in
+    XCTAssertThrowsError(try detectTriangle(3, 4, 5), "Segitiga Sembarang") { error in
       XCTAssertEqual(error as? TriangleError, TriangleError.invalidInput)
     }
   }
